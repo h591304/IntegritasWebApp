@@ -1,7 +1,7 @@
-package no.birtheeriksen.integritas_backend.service
+package com.birtheeriksen.integritas_backend.service
 
-import no.birtheeriksen.integritas_backend.models.ArticleEntity
-import no.birtheeriksen.integritas_backend.repository.ArticleRepository
+import com.birtheeriksen.integritas_backend.models.ArticleEntity
+import com.birtheeriksen.integritas_backend.repository.ArticleRepository
 import org.springframework.stereotype.Service
 
 @Service
@@ -13,7 +13,7 @@ class ArticleService(private val articleRepo: ArticleRepository) {
 
     fun getArticle(id: Long): ArticleEntity {
         return articleRepo.findById(id).orElseThrow {
-            RuntimeException("Couldn't find article by id $id")
+            NoSuchElementException("Couldn't find article by id $id")
         }
     }
 

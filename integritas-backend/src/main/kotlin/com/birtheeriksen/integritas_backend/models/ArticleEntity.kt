@@ -1,4 +1,4 @@
-package no.birtheeriksen.integritas_backend.models
+package com.birtheeriksen.integritas_backend.models
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
@@ -26,6 +26,9 @@ class ArticleEntity {
 
     @Column(nullable = false, columnDefinition = "TEXT")
     var  content: String = ""
+
+    @Column(nullable = false, unique = true)
+    var  imageUrl: String = ""
 
     @Column(nullable = false)
     var author: String = ""

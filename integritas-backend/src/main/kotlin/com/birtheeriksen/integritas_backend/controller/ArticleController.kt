@@ -1,4 +1,4 @@
-package no.birtheeriksen.integritas_backend.controller
+package com.birtheeriksen.integritas_backend.controller
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
