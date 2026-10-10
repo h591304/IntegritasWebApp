@@ -1,5 +1,6 @@
 plugins {
 	kotlin("jvm") version "2.3.21"
+	kotlin("kapt") version "2.3.21"
 	kotlin("plugin.spring") version "2.3.21"
 	id("org.springframework.boot") version "4.1.1"
 	id("io.spring.dependency-management") version "1.1.7"
@@ -26,6 +27,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("tools.jackson.module:jackson-module-kotlin")
+	implementation("org.mapstruct:mapstruct:1.6.3")
+	kapt("org.mapstruct:mapstruct-processor:1.6.3")
 	runtimeOnly("com.h2database:h2")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
